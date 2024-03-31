@@ -21,7 +21,6 @@ namespace Projeto_Calculadoras
         {
             frmCalc1 objCalculadora1 = new frmCalc1();
             objCalculadora1.ShowDialog();
-            //teste de commit github
         }
 
         private void Calc2_Click(object sender, EventArgs e)

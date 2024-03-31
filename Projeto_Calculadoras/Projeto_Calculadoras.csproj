@@ -99,19 +99,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\fundos-hexadecimais-azuis-para-rede.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3260107.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\5298097.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\5137843.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\formas-brancas-em-fundo-preto.jpg" />
+    <Content Include="Resources\3260107.jpg" />
+    <Content Include="Resources\5298097.jpg" />
+    <Content Include="Resources\formas-brancas-em-fundo-preto.jpg" />
+    <Content Include="Resources\fundos-hexadecimais-azuis-para-rede.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

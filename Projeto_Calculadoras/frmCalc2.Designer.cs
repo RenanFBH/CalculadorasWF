@@ -81,7 +81,7 @@ namespace Projeto_Calculadoras
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(333, 487);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(347, 524);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // label1
@@ -90,7 +90,7 @@ namespace Projeto_Calculadoras
             this.label1.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(3, 21);
+            this.label1.Location = new System.Drawing.Point(10, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(327, 41);
@@ -131,7 +131,7 @@ namespace Projeto_Calculadoras
             this.tableLayoutPanel2.Controls.Add(this.btnRaiz, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnPorcentagem, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 196);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 210);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 6;
@@ -141,7 +141,7 @@ namespace Projeto_Calculadoras
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(329, 289);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(343, 312);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // btnIgual
@@ -149,7 +149,7 @@ namespace Projeto_Calculadoras
             this.btnIgual.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIgual.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnIgual.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIgual.Location = new System.Drawing.Point(248, 242);
+            this.btnIgual.Location = new System.Drawing.Point(259, 261);
             this.btnIgual.Margin = new System.Windows.Forms.Padding(2);
             this.btnIgual.Name = "btnIgual";
             this.btnIgual.Size = new System.Drawing.Size(79, 45);
@@ -164,7 +164,7 @@ namespace Projeto_Calculadoras
             this.btnVirgula.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnVirgula.BackColor = System.Drawing.Color.Transparent;
             this.btnVirgula.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVirgula.Location = new System.Drawing.Point(166, 242);
+            this.btnVirgula.Location = new System.Drawing.Point(173, 261);
             this.btnVirgula.Margin = new System.Windows.Forms.Padding(2);
             this.btnVirgula.Name = "btnVirgula";
             this.btnVirgula.Size = new System.Drawing.Size(78, 45);
@@ -179,7 +179,7 @@ namespace Projeto_Calculadoras
             this.btnNum0.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNum0.BackColor = System.Drawing.SystemColors.MenuBar;
             this.btnNum0.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNum0.Location = new System.Drawing.Point(84, 242);
+            this.btnNum0.Location = new System.Drawing.Point(88, 261);
             this.btnNum0.Margin = new System.Windows.Forms.Padding(2);
             this.btnNum0.Name = "btnNum0";
             this.btnNum0.Size = new System.Drawing.Size(78, 45);
@@ -194,7 +194,7 @@ namespace Projeto_Calculadoras
             this.btnMais_menos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnMais_menos.BackColor = System.Drawing.Color.Transparent;
             this.btnMais_menos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMais_menos.Location = new System.Drawing.Point(2, 242);
+            this.btnMais_menos.Location = new System.Drawing.Point(3, 261);
             this.btnMais_menos.Margin = new System.Windows.Forms.Padding(2);
             this.btnMais_menos.Name = "btnMais_menos";
             this.btnMais_menos.Size = new System.Drawing.Size(78, 45);
@@ -209,7 +209,7 @@ namespace Projeto_Calculadoras
             this.btnAdicao.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdicao.BackColor = System.Drawing.Color.Transparent;
             this.btnAdicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicao.Location = new System.Drawing.Point(248, 194);
+            this.btnAdicao.Location = new System.Drawing.Point(259, 207);
             this.btnAdicao.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdicao.Name = "btnAdicao";
             this.btnAdicao.Size = new System.Drawing.Size(79, 44);
@@ -224,7 +224,7 @@ namespace Projeto_Calculadoras
             this.btnNum3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNum3.BackColor = System.Drawing.SystemColors.MenuBar;
             this.btnNum3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNum3.Location = new System.Drawing.Point(166, 194);
+            this.btnNum3.Location = new System.Drawing.Point(173, 207);
             this.btnNum3.Margin = new System.Windows.Forms.Padding(2);
             this.btnNum3.Name = "btnNum3";
             this.btnNum3.Size = new System.Drawing.Size(78, 44);
@@ -239,7 +239,7 @@ namespace Projeto_Calculadoras
             this.btnNum2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNum2.BackColor = System.Drawing.SystemColors.MenuBar;
             this.btnNum2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNum2.Location = new System.Drawing.Point(84, 194);
+            this.btnNum2.Location = new System.Drawing.Point(88, 207);
             this.btnNum2.Margin = new System.Windows.Forms.Padding(2);
             this.btnNum2.Name = "btnNum2";
             this.btnNum2.Size = new System.Drawing.Size(78, 44);
@@ -254,7 +254,7 @@ namespace Projeto_Calculadoras
             this.btnNum1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNum1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.btnNum1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNum1.Location = new System.Drawing.Point(2, 194);
+            this.btnNum1.Location = new System.Drawing.Point(3, 207);
             this.btnNum1.Margin = new System.Windows.Forms.Padding(2);
             this.btnNum1.Name = "btnNum1";
             this.btnNum1.Size = new System.Drawing.Size(78, 44);
@@ -269,7 +269,7 @@ namespace Projeto_Calculadoras
             this.btnSubtracao.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSubtracao.BackColor = System.Drawing.Color.Transparent;
             this.btnSubtracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubtracao.Location = new System.Drawing.Point(248, 146);
+            this.btnSubtracao.Location = new System.Drawing.Point(259, 156);
             this.btnSubtracao.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubtracao.Name = "btnSubtracao";
             this.btnSubtracao.Size = new System.Drawing.Size(79, 44);
@@ -284,7 +284,7 @@ namespace Projeto_Calculadoras
             this.btnNum6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNum6.BackColor = System.Drawing.SystemColors.MenuBar;
             this.btnNum6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNum6.Location = new System.Drawing.Point(166, 146);
+            this.btnNum6.Location = new System.Drawing.Point(173, 156);
             this.btnNum6.Margin = new System.Windows.Forms.Padding(2);
             this.btnNum6.Name = "btnNum6";
             this.btnNum6.Size = new System.Drawing.Size(78, 44);
@@ -299,7 +299,7 @@ namespace Projeto_Calculadoras
             this.btnNum5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNum5.BackColor = System.Drawing.SystemColors.MenuBar;
             this.btnNum5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNum5.Location = new System.Drawing.Point(84, 146);
+            this.btnNum5.Location = new System.Drawing.Point(88, 156);
             this.btnNum5.Margin = new System.Windows.Forms.Padding(2);
             this.btnNum5.Name = "btnNum5";
             this.btnNum5.Size = new System.Drawing.Size(78, 44);
@@ -314,7 +314,7 @@ namespace Projeto_Calculadoras
             this.btnNum4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNum4.BackColor = System.Drawing.SystemColors.MenuBar;
             this.btnNum4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNum4.Location = new System.Drawing.Point(2, 146);
+            this.btnNum4.Location = new System.Drawing.Point(3, 156);
             this.btnNum4.Margin = new System.Windows.Forms.Padding(2);
             this.btnNum4.Name = "btnNum4";
             this.btnNum4.Size = new System.Drawing.Size(78, 44);
@@ -329,7 +329,7 @@ namespace Projeto_Calculadoras
             this.btnMultiplicacao.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnMultiplicacao.BackColor = System.Drawing.Color.Transparent;
             this.btnMultiplicacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMultiplicacao.Location = new System.Drawing.Point(248, 98);
+            this.btnMultiplicacao.Location = new System.Drawing.Point(259, 105);
             this.btnMultiplicacao.Margin = new System.Windows.Forms.Padding(2);
             this.btnMultiplicacao.Name = "btnMultiplicacao";
             this.btnMultiplicacao.Size = new System.Drawing.Size(79, 44);
@@ -344,7 +344,7 @@ namespace Projeto_Calculadoras
             this.btnNum9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNum9.BackColor = System.Drawing.SystemColors.MenuBar;
             this.btnNum9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNum9.Location = new System.Drawing.Point(166, 98);
+            this.btnNum9.Location = new System.Drawing.Point(173, 105);
             this.btnNum9.Margin = new System.Windows.Forms.Padding(2);
             this.btnNum9.Name = "btnNum9";
             this.btnNum9.Size = new System.Drawing.Size(78, 44);
@@ -359,7 +359,7 @@ namespace Projeto_Calculadoras
             this.btnNum8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNum8.BackColor = System.Drawing.SystemColors.MenuBar;
             this.btnNum8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNum8.Location = new System.Drawing.Point(84, 98);
+            this.btnNum8.Location = new System.Drawing.Point(88, 105);
             this.btnNum8.Margin = new System.Windows.Forms.Padding(2);
             this.btnNum8.Name = "btnNum8";
             this.btnNum8.Size = new System.Drawing.Size(78, 44);
@@ -374,7 +374,7 @@ namespace Projeto_Calculadoras
             this.btnNum7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNum7.BackColor = System.Drawing.SystemColors.MenuBar;
             this.btnNum7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNum7.Location = new System.Drawing.Point(2, 98);
+            this.btnNum7.Location = new System.Drawing.Point(3, 105);
             this.btnNum7.Margin = new System.Windows.Forms.Padding(2);
             this.btnNum7.Name = "btnNum7";
             this.btnNum7.Size = new System.Drawing.Size(78, 44);
@@ -389,7 +389,7 @@ namespace Projeto_Calculadoras
             this.btnDivisao.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDivisao.BackColor = System.Drawing.Color.Transparent;
             this.btnDivisao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDivisao.Location = new System.Drawing.Point(248, 50);
+            this.btnDivisao.Location = new System.Drawing.Point(259, 54);
             this.btnDivisao.Margin = new System.Windows.Forms.Padding(2);
             this.btnDivisao.Name = "btnDivisao";
             this.btnDivisao.Size = new System.Drawing.Size(79, 44);
@@ -404,7 +404,7 @@ namespace Projeto_Calculadoras
             this.btnApagar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnApagar.BackColor = System.Drawing.Color.Transparent;
             this.btnApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApagar.Location = new System.Drawing.Point(166, 50);
+            this.btnApagar.Location = new System.Drawing.Point(173, 54);
             this.btnApagar.Margin = new System.Windows.Forms.Padding(2);
             this.btnApagar.Name = "btnApagar";
             this.btnApagar.Size = new System.Drawing.Size(78, 44);
@@ -419,7 +419,7 @@ namespace Projeto_Calculadoras
             this.btnC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnC.BackColor = System.Drawing.Color.Transparent;
             this.btnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnC.Location = new System.Drawing.Point(84, 50);
+            this.btnC.Location = new System.Drawing.Point(88, 54);
             this.btnC.Margin = new System.Windows.Forms.Padding(2);
             this.btnC.Name = "btnC";
             this.btnC.Size = new System.Drawing.Size(78, 44);
@@ -434,7 +434,7 @@ namespace Projeto_Calculadoras
             this.btnCe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCe.BackColor = System.Drawing.Color.Transparent;
             this.btnCe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCe.Location = new System.Drawing.Point(2, 50);
+            this.btnCe.Location = new System.Drawing.Point(3, 54);
             this.btnCe.Margin = new System.Windows.Forms.Padding(2);
             this.btnCe.Name = "btnCe";
             this.btnCe.Size = new System.Drawing.Size(78, 44);
@@ -449,7 +449,7 @@ namespace Projeto_Calculadoras
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(248, 2);
+            this.button4.Location = new System.Drawing.Point(259, 3);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(79, 44);
@@ -464,7 +464,7 @@ namespace Projeto_Calculadoras
             this.btnPotenciacao.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPotenciacao.BackColor = System.Drawing.Color.Transparent;
             this.btnPotenciacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPotenciacao.Location = new System.Drawing.Point(166, 2);
+            this.btnPotenciacao.Location = new System.Drawing.Point(173, 3);
             this.btnPotenciacao.Margin = new System.Windows.Forms.Padding(2);
             this.btnPotenciacao.Name = "btnPotenciacao";
             this.btnPotenciacao.Size = new System.Drawing.Size(78, 44);
@@ -479,7 +479,7 @@ namespace Projeto_Calculadoras
             this.btnRaiz.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRaiz.BackColor = System.Drawing.Color.Transparent;
             this.btnRaiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRaiz.Location = new System.Drawing.Point(84, 2);
+            this.btnRaiz.Location = new System.Drawing.Point(88, 3);
             this.btnRaiz.Margin = new System.Windows.Forms.Padding(2);
             this.btnRaiz.Name = "btnRaiz";
             this.btnRaiz.Size = new System.Drawing.Size(78, 44);
@@ -494,7 +494,7 @@ namespace Projeto_Calculadoras
             this.btnPorcentagem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPorcentagem.BackColor = System.Drawing.Color.Transparent;
             this.btnPorcentagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPorcentagem.Location = new System.Drawing.Point(2, 2);
+            this.btnPorcentagem.Location = new System.Drawing.Point(3, 3);
             this.btnPorcentagem.Margin = new System.Windows.Forms.Padding(2);
             this.btnPorcentagem.Name = "btnPorcentagem";
             this.btnPorcentagem.Size = new System.Drawing.Size(78, 44);
@@ -502,7 +502,7 @@ namespace Projeto_Calculadoras
             this.btnPorcentagem.TabStop = false;
             this.btnPorcentagem.Text = "%";
             this.btnPorcentagem.UseVisualStyleBackColor = false;
-            this.btnPorcentagem.Click += new System.EventHandler(this.f_operacoes);
+            this.btnPorcentagem.Click += new System.EventHandler(this.btnIgual_Click);
             // 
             // lblVisor
             // 
@@ -511,7 +511,7 @@ namespace Projeto_Calculadoras
             this.lblVisor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblVisor.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVisor.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblVisor.Location = new System.Drawing.Point(3, 121);
+            this.lblVisor.Location = new System.Drawing.Point(10, 132);
             this.lblVisor.Margin = new System.Windows.Forms.Padding(3, 0, 3, 20);
             this.lblVisor.Name = "lblVisor";
             this.lblVisor.Size = new System.Drawing.Size(327, 53);
@@ -524,7 +524,7 @@ namespace Projeto_Calculadoras
             this.lblHist.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblHist.BackColor = System.Drawing.Color.Transparent;
             this.lblHist.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblHist.Location = new System.Drawing.Point(2, 79);
+            this.lblHist.Location = new System.Drawing.Point(9, 88);
             this.lblHist.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHist.Name = "lblHist";
             this.lblHist.Size = new System.Drawing.Size(329, 42);
@@ -535,7 +535,7 @@ namespace Projeto_Calculadoras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 487);
+            this.ClientSize = new System.Drawing.Size(347, 524);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
