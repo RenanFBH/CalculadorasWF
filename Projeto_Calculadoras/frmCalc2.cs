@@ -228,7 +228,7 @@ namespace Projeto_Calculadoras
         {
             //Muda cor ao pressionar tecla
             string tecla = e.KeyCode.ToString();
-            //lblHist.Text = e.KeyCode.ToString();
+            lblHist.Text = e.KeyCode.ToString();
             foreach (Control btn in tableLayoutPanel2.Controls)
             {
                 if (btn is Button && tecla.Length == 7 && tecla != "Decimal")
