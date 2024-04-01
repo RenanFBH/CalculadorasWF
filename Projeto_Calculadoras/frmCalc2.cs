@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Projeto_Calculadoras
@@ -17,14 +11,18 @@ namespace Projeto_Calculadoras
             InitializeComponent();
         }
 
-        /* Para concluir a atividade, ainda devo arrumar o erro em que quando uma operação que não necessita de dois números é 
-        utilizada x vezes em seguida o lblHist.text fica = "", e o calculo de porcentagem também deve ser modificado*/
+        /* 31/03 - Para concluir a atividade, ainda devo arrumar o erro em que quando uma operação que não necessita de dois números é 
+        utilizada x vezes em seguida o lblHist.text fica = "", e o calculo de porcentagem também deve ser modificado
+        
+           01/04 - Porcentagem aparentemente solucionada, encontrei + 2 bugs e já os arrumei.
+         */
 
         //variáveis globais
-        decimal vNumAnt; 
+        decimal vNumAnt;
         string vOperacao, somatoria = "";
         bool vLimpa, vLimpa2, vOperacaoDupla;
         Color corAnt;
+
 
         //Acionamento dos números
         private void f_numeros(object sender, EventArgs e)
@@ -38,7 +36,7 @@ namespace Projeto_Calculadoras
             if (lblVisor.Text == "0" || vLimpa == true) lblVisor.Text = ""; vLimpa = false;
             if (vNumero != "," || (vNumero == "," && !lblVisor.Text.Contains(",")))
             {
-                if (vNumero == "," &&  lblVisor.Text == "")
+                if (vNumero == "," && lblVisor.Text == "")
                 {
                     lblVisor.Text = "0,";
                 }
@@ -59,7 +57,7 @@ namespace Projeto_Calculadoras
             if (vLimpa2) lblHist.Text = ""; vLimpa2 = false;
             //Operações que não precisam de 2 números 
             if (vOperacao == "²√" || vOperacao == "x²" || vOperacao == "¹/x" || vOperacao == "±")
-            {       
+            {
                 switch (vOperacao)
                 {
                     case "²√":
@@ -86,7 +84,7 @@ namespace Projeto_Calculadoras
                             {
                                 lblHist.Text = "";
                                 MessageBox.Show("Não é possível dividir por zero!");
-                            }                         
+                            }
                             break;
                         }
                     case "±":
@@ -94,7 +92,7 @@ namespace Projeto_Calculadoras
                             lblVisor.Text = (vNumAnt * (-1)).ToString();
                             break;
                         }
-                }               
+                }
                 //vLimpa para limpar o Visor após a operação
                 vLimpa = true;
                 //vLimpa 2 para limpar o Histórico após a operação
@@ -117,62 +115,76 @@ namespace Projeto_Calculadoras
         //Acionamento do botão igual
         private void btnIgual_Click(object sender, EventArgs e)
         {
+            string vOperacao2;
+            try
+            {
+                vOperacao2 = ((Button)sender).Text;
+            }
+            catch (Exception)
+            {
+                vOperacao2 = "";
+            }          
             decimal vNumPost = decimal.Parse(lblVisor.Text);
             decimal porcentagem;
-            //Realizando as operações de 2 números
-            if (!vOperacaoDupla)
+            
+            // Verifica se o evento foi acionado por uma tecla pressionada
+            if (e is KeyEventArgs keyArgs && keyArgs.KeyCode == Keys.Return || vOperacao2 == "=")
             {
+                // Verifica a operação
                 switch (vOperacao)
                 {
                     case "+":
-                        {
-                            lblVisor.Text = (vNumAnt + vNumPost).ToString();
-                            lblHist.Text += " " + vNumPost + " = ";
-                            break;
-                        }
+                        lblVisor.Text = (vNumAnt + vNumPost).ToString();
+                        lblHist.Text += " " + vNumPost + " = ";
+                        break;
                     case "-":
-                        {
-                            lblVisor.Text = (vNumAnt - vNumPost).ToString();
-                            lblHist.Text += " " + vNumPost + " = ";
-                            break;
-                        }
+                        lblVisor.Text = (vNumAnt - vNumPost).ToString();
+                        lblHist.Text += " " + vNumPost + " = ";
+                        break;
                     case "×":
-                        {
-                            lblVisor.Text = (vNumAnt * vNumPost).ToString();
-                            lblHist.Text += " " + vNumPost + " = ";
-                            break;
-                        }
+                        lblVisor.Text = (vNumAnt * vNumPost).ToString();
+                        lblHist.Text += " " + vNumPost + " = ";
+                        break;
                     case "÷":
+                        try
                         {
-                            try
-                            {
-                                lblVisor.Text = (vNumAnt / vNumPost).ToString();
-                                lblHist.Text += " " + vNumPost + " = ";
-                            }
-                            catch (DivideByZeroException)
-                            {
-                                MessageBox.Show("Não é possível dividir por zero!");
-                            }
-                            break;
+                            lblVisor.Text = (vNumAnt / vNumPost).ToString();
+                            lblHist.Text += " " + vNumPost + " = ";
                         }
+                        catch (DivideByZeroException)
+                        {
+                            MessageBox.Show("Não é possível dividir por zero!");
+                        }
+                        break;
                     default:
                         break;
                 }
             }
-            else
+            else if (vOperacao2 == "%")
             {
+                lblHist.Text += " " + vNumPost +  "%" + " = ";
                 porcentagem = vNumPost;
-                if (lblHist.Text.Contains("-")) porcentagem = (porcentagem * (-1));
-                else if (lblHist.Text.Contains("+")) { }
-                lblVisor.Text = ((vNumAnt / 100) * porcentagem).ToString();
-            }            
-                   
-            //Limpando Visor e Histórico e deixando o foco em Visor
+                if (lblHist.Text.Contains("-"))
+                {
+                    porcentagem = (porcentagem * (-1));
+                    lblVisor.Text = (vNumAnt + ((vNumAnt / 100) * porcentagem)).ToString();
+                }
+                else if (lblHist.Text.Contains("+"))
+                {
+                    lblVisor.Text = (vNumAnt + ((vNumAnt / 100) * porcentagem)).ToString();
+                }
+                vOperacaoDupla = false;
+                vLimpa2 = true;
+                vLimpa = true;
+            }
+
+            // Limpando Visor e Histórico e deixando o foco em Visor
             somatoria += lblVisor.Text + " ";
-            vLimpa2 = true;
+            vLimpa2 = false;
             vLimpa = true;
             lblVisor.Focus();
         }
+
 
         //Acionamento dos Botões que apagam, CE, C e <-
         private void f_apagar(object sender, EventArgs e)
@@ -196,7 +208,7 @@ namespace Projeto_Calculadoras
                         {
                             if (lblVisor.Text != "0" && lblVisor.Text.Length == 1) lblVisor.Text = "0";
                             else if (lblVisor.Text == "0") { }
-                            else lblVisor.Text = lblVisor.Text.Remove(lblVisor.Text.Length - 1, 1);                 
+                            else lblVisor.Text = lblVisor.Text.Remove(lblVisor.Text.Length - 1, 1);
                         }
                         break;
                     }
@@ -219,7 +231,7 @@ namespace Projeto_Calculadoras
             //lblHist.Text = e.KeyCode.ToString();
             foreach (Control btn in tableLayoutPanel2.Controls)
             {
-                if (btn is Button && tecla.Length == 7)
+                if (btn is Button && tecla.Length == 7 && tecla != "Decimal")
                 {
                     if (btn.Text == tecla.Substring(6, 1))
                     {
@@ -232,7 +244,7 @@ namespace Projeto_Calculadoras
                     switch (tecla)
                     {
                         case "Add":
-                            {     
+                            {
                                 if (btn.Text == "+")
                                 {
                                     corAnt = btn.BackColor;
@@ -290,7 +302,7 @@ namespace Projeto_Calculadoras
                                 if (btn.Text == "²√")
                                 {
                                     corAnt = btn.BackColor;
-                                    btn.BackColor = Color.Gray; 
+                                    btn.BackColor = Color.Gray;
                                 }
                                 break;
                             }
@@ -312,8 +324,9 @@ namespace Projeto_Calculadoras
                                 }
                                 break;
                             }
-                        case "Oemcomma":
+                        case "Decimal":
                             {
+                                //Oemcomma
                                 if (btn.Text == ",")
                                 {
                                     corAnt = btn.BackColor;
@@ -330,7 +343,34 @@ namespace Projeto_Calculadoras
                                 }
                                 break;
                             }
-                    }             
+                        case "C":
+                            {
+                                if (btn.Text == "C")
+                                {
+                                    corAnt = btn.BackColor;
+                                    btn.BackColor = Color.Gray;
+                                }
+                                break;
+                            }
+                        case "X":
+                            {
+                                if (btn.Text == "CE")
+                                {
+                                    corAnt = btn.BackColor;
+                                    btn.BackColor = Color.Gray;
+                                }
+                                break;
+                            }
+                        case "Back":
+                            {
+                                if (btn.Text == "<-")
+                                {
+                                    corAnt = btn.BackColor;
+                                    btn.BackColor = Color.Gray;
+                                }
+                                break;
+                            }
+                    }
                 }
             }
             //Sai do form ao pressionar esc
@@ -346,7 +386,7 @@ namespace Projeto_Calculadoras
                 Bot.Text = tecla.Substring(6, 1);
                 f_numeros(Bot, e);
             }
-            else 
+            else
             {
                 switch (e.KeyCode.ToString())
                 {
@@ -404,7 +444,7 @@ namespace Projeto_Calculadoras
                             f_operacoes(Bot, e);
                             break;
                         }
-                    case "Oemcomma":
+                    case "Decimal":
                         {
                             Bot.Text = ",";
                             f_numeros(Bot, e);
@@ -443,7 +483,7 @@ namespace Projeto_Calculadoras
             string tecla = e.KeyCode.ToString();
             foreach (Control btn in tableLayoutPanel2.Controls)
             {
-                if (btn is Button && tecla.Length == 7)
+                if (btn is Button && tecla.Length == 7 && tecla != "Decimal")
                 {
                     if (btn.Text == tecla.Substring(6, 1)) btn.BackColor = corAnt;
                 }
@@ -496,14 +536,29 @@ namespace Projeto_Calculadoras
                                 if (btn.Text == "±") btn.BackColor = corAnt;
                                 break;
                             }
-                        case "Oemcomma":
+                        case "Decimal":
                             {
-                                if(btn.Text == ",") btn.BackColor = corAnt;
+                                if (btn.Text == ",") btn.BackColor = corAnt;
                                 break;
                             }
                         case "Return":
                             {
-                                if(btn.Text == "=") btn.BackColor = corAnt;
+                                if (btn.Text == "=") btn.BackColor = corAnt;
+                                break;
+                            }
+                        case "C":
+                            {
+                                if (btn.Text == "C") btn.BackColor = corAnt;
+                                break;
+                            }
+                        case "X":
+                            {
+                                if (btn.Text == "CE") btn.BackColor = corAnt;
+                                break;
+                            }
+                        case "Back":
+                            {
+                                if (btn.Text == "<-") btn.BackColor = corAnt;
                                 break;
                             }
                     }
