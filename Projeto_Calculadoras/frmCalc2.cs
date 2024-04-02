@@ -98,7 +98,7 @@ namespace Projeto_Calculadoras
                 //vLimpa 2 para limpar o Histórico após a operação
                 vLimpa2 = true;
             }
-            else if ((vOperacao == "+" && somatoria != vNumAnt.ToString()) || (vOperacao == "-" && somatoria != vNumAnt.ToString()))
+            else if ((vOperacao == "+" && somatoria != vNumAnt.ToString()) || (vOperacao == "-" && somatoria != vNumAnt.ToString()) || (vOperacao == "×" && somatoria != vNumAnt.ToString()) || (vOperacao == "÷" && somatoria != vNumAnt.ToString()))
             {
                 vLimpa = true;
                 vLimpa2 = false;
@@ -228,7 +228,7 @@ namespace Projeto_Calculadoras
         {
             //Muda cor ao pressionar tecla
             string tecla = e.KeyCode.ToString();
-            lblHist.Text = e.KeyCode.ToString();
+            //lblHist.Text = e.KeyCode.ToString();
             foreach (Control btn in tableLayoutPanel2.Controls)
             {
                 if (btn is Button && tecla.Length == 7 && tecla != "Decimal")
